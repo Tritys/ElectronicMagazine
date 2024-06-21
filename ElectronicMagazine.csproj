@@ -1,0 +1,354 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{701C2CA3-200A-4A93-8306-0C9B7E9C8B20}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ElectronicMagazine</RootNamespace>
+    <AssemblyName>ElectronicMagazine</AssemblyName>
+    <TargetFrameworkVersion>v4.8.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="ApplicationData\AttendanceID.cs">
+      <DependentUpon>ElectronicMagazine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationData\Document.cs">
+      <DependentUpon>ElectronicMagazine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationData\ElectronicMagazine.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectronicMagazine.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationData\ElectronicMagazine.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectronicMagazine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationData\ElectronicMagazine.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ElectronicMagazine.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationData\GradesID.cs">
+      <DependentUpon>ElectronicMagazine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationData\GroupID.cs">
+      <DependentUpon>ElectronicMagazine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationData\SalaryID.cs">
+      <DependentUpon>ElectronicMagazine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationData\ScheduleID.cs">
+      <DependentUpon>ElectronicMagazine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationData\StudentID.cs">
+      <DependentUpon>ElectronicMagazine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationData\SubjectID.cs">
+      <DependentUpon>ElectronicMagazine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationData\TeacherID.cs">
+      <DependentUpon>ElectronicMagazine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ApplicationData\User.cs">
+      <DependentUpon>ElectronicMagazine.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Documents2.xaml.cs">
+      <DependentUpon>Documents2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Grade.xaml.cs">
+      <DependentUpon>Grade.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Links_to_Resources2.xaml.cs">
+      <DependentUpon>Links_to_Resources2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Message2.xaml.cs">
+      <DependentUpon>Message2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Student\News_and_Updates2.xaml.cs">
+      <DependentUpon>News_and_Updates2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Profile2.xaml.cs">
+      <DependentUpon>Profile2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Student\ReferencesApplications.xaml.cs">
+      <DependentUpon>ReferencesApplications.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Student\Schedule2.xaml.cs">
+      <DependentUpon>Schedule2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\Documents3.xaml.cs">
+      <DependentUpon>Documents3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\Grade2.xaml.cs">
+      <DependentUpon>Grade2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\Links_to_Resources3.xaml.cs">
+      <DependentUpon>Links_to_Resources3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\Message3.xaml.cs">
+      <DependentUpon>Message3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\News_and_Updates3.xaml.cs">
+      <DependentUpon>News_and_Updates3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\Profile3.xaml.cs">
+      <DependentUpon>Profile3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\Salary.xaml.cs">
+      <DependentUpon>Salary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\Schedule3.xaml.cs">
+      <DependentUpon>Schedule3.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Teacher\Teacher2.xaml.cs">
+      <DependentUpon>Teacher2.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Admin\Documents.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Links_to_Resources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Message.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\News_and_Updates.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Profile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Schedule.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Student.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Admin\Teacher.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="Admin\Documents.xaml.cs">
+      <DependentUpon>Documents.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Links_to_Resources.xaml.cs">
+      <DependentUpon>Links_to_Resources.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Message.xaml.cs">
+      <DependentUpon>Message.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\News_and_Updates.xaml.cs">
+      <DependentUpon>News_and_Updates.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Profile.xaml.cs">
+      <DependentUpon>Profile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Schedule.xaml.cs">
+      <DependentUpon>Schedule.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Student.xaml.cs">
+      <DependentUpon>Student.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Teacher.xaml.cs">
+      <DependentUpon>Teacher.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ApplicationData\AppConnect.cs" />
+    <Compile Include="ApplicationData\AppFrame.cs" />
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Student\Documents2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Student\Grade.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Student\Links_to_Resources2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Student\Message2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Student\News_and_Updates2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Student\Profile2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Student\ReferencesApplications.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Student\Schedule2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Teacher\Documents3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Teacher\Grade2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Teacher\Links_to_Resources3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Teacher\Message3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Teacher\News_and_Updates3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Teacher\Profile3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Teacher\Salary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Teacher\Schedule3.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Teacher\Teacher2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EntityDeploy Include="ApplicationData\ElectronicMagazine.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ElectronicMagazine.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ApplicationData\ElectronicMagazine.edmx.diagram">
+      <DependentUpon>ElectronicMagazine.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="ApplicationData\ElectronicMagazine.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>ElectronicMagazine.Context.cs</LastGenOutput>
+      <DependentUpon>ElectronicMagazine.edmx</DependentUpon>
+    </Content>
+    <Content Include="ApplicationData\ElectronicMagazine.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ElectronicMagazine.edmx</DependentUpon>
+      <LastGenOutput>ElectronicMagazine.cs</LastGenOutput>
+    </Content>
+    <Resource Include="image\png-transparent-computer-icons-black-white-people-critical-illness-miscellaneous-people-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

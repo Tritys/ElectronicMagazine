@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Хранилище ElectronicMagazineModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="AttendanceID">
+          <Key>
+            <PropertyRef Name="IDAttendance" />
+          </Key>
+          <Property Name="IDAttendance" Type="int" Nullable="false" />
+          <Property Name="IDStudent" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Document">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="LinkDocument" Type="nvarchar(max)" />
+          <Property Name="Data" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="GradesID">
+          <Key>
+            <PropertyRef Name="IDGrades" />
+          </Key>
+          <Property Name="IDGrades" Type="int" Nullable="false" />
+          <Property Name="Grades" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="GroupID">
+          <Key>
+            <PropertyRef Name="IDGroup" />
+          </Key>
+          <Property Name="IDGroup" Type="int" Nullable="false" />
+          <Property Name="Number" Type="nvarchar(max)" />
+          <Property Name="IDTeacher" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="SalaryID">
+          <Key>
+            <PropertyRef Name="IDSalary" />
+          </Key>
+          <Property Name="IDSalary" Type="int" Nullable="false" />
+          <Property Name="Salary" Type="nvarchar(max)" />
+          <Property Name="IDTeacher" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="ScheduleID">
+          <Key>
+            <PropertyRef Name="IDSchedule" />
+          </Key>
+          <Property Name="IDSchedule" Type="int" Nullable="false" />
+          <Property Name="Monday" Type="nvarchar(max)" />
+          <Property Name="Tuesday" Type="nvarchar(max)" />
+          <Property Name="Wednesday" Type="nvarchar(max)" />
+          <Property Name="Thursday" Type="nvarchar(max)" />
+          <Property Name="Friday" Type="nvarchar(max)" />
+          <Property Name="Saturday" Type="nvarchar(max)" />
+          <Property Name="Sanday" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="StudentID">
+          <Key>
+            <PropertyRef Name="IDUser" />
+          </Key>
+          <Property Name="IDUser" Type="int" Nullable="false" />
+          <Property Name="FIO" Type="nvarchar(max)" />
+          <Property Name="IDGroup" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="Phone" Type="nvarchar(max)" />
+          <Property Name="IDAttendance" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="SubjectID">
+          <Key>
+            <PropertyRef Name="IDSubjects" />
+          </Key>
+          <Property Name="IDSubjects" Type="int" Nullable="false" />
+          <Property Name="Subject" Type="nchar" MaxLength="10" />
+          <Property Name="Teacher" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="TeacherID">
+          <Key>
+            <PropertyRef Name="IDTeacher" />
+          </Key>
+          <Property Name="IDTeacher" Type="int" Nullable="false" />
+          <Property Name="FIO" Type="nvarchar(max)" />
+          <Property Name="Phone" Type="nvarchar(max)" />
+          <Property Name="IDGroup" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" Nullable="false" />
+          <Property Name="Login" Type="nvarchar(max)" />
+          <Property Name="Password" Type="nvarchar(max)" />
+          <Property Name="Role" Type="nvarchar(max)" />
+          <Property Name="IDFIO" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityContainer Name="Хранилище ElectronicMagazineModelContainer">
+          <EntitySet Name="AttendanceID" EntityType="Self.AttendanceID" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Document" EntityType="Self.Document" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GradesID" EntityType="Self.GradesID" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="GroupID" EntityType="Self.GroupID" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SalaryID" EntityType="Self.SalaryID" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ScheduleID" EntityType="Self.ScheduleID" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="StudentID" EntityType="Self.StudentID" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SubjectID" EntityType="Self.SubjectID" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TeacherID" EntityType="Self.TeacherID" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ElectronicMagazineModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="AttendanceID">
+          <Key>
+            <PropertyRef Name="IDAttendance" />
+          </Key>
+          <Property Name="IDAttendance" Type="Int32" Nullable="false" />
+          <Property Name="IDStudent" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="GradesID">
+          <Key>
+            <PropertyRef Name="IDGrades" />
+          </Key>
+          <Property Name="IDGrades" Type="Int32" Nullable="false" />
+          <Property Name="Grades" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="GroupID">
+          <Key>
+            <PropertyRef Name="IDGroup" />
+          </Key>
+          <Property Name="IDGroup" Type="Int32" Nullable="false" />
+          <Property Name="Number" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IDTeacher" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SalaryID">
+          <Key>
+            <PropertyRef Name="IDSalary" />
+          </Key>
+          <Property Name="IDSalary" Type="Int32" Nullable="false" />
+          <Property Name="Salary" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IDTeacher" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ScheduleID">
+          <Key>
+            <PropertyRef Name="IDSchedule" />
+          </Key>
+          <Property Name="IDSchedule" Type="Int32" Nullable="false" />
+          <Property Name="Monday" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Tuesday" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Wednesday" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Thursday" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Friday" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Saturday" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Sanday" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="StudentID">
+          <Key>
+            <PropertyRef Name="IDUser" />
+          </Key>
+          <Property Name="IDUser" Type="Int32" Nullable="false" />
+          <Property Name="FIO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IDGroup" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IDAttendance" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="SubjectID">
+          <Key>
+            <PropertyRef Name="IDSubjects" />
+          </Key>
+          <Property Name="IDSubjects" Type="Int32" Nullable="false" />
+          <Property Name="Subject" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Teacher" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="TeacherID">
+          <Key>
+            <PropertyRef Name="IDTeacher" />
+          </Key>
+          <Property Name="IDTeacher" Type="Int32" Nullable="false" />
+          <Property Name="FIO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IDGroup" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" />
+          <Property Name="Login" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Role" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IDFIO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="ElectronicMagazineEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="AttendanceID" EntityType="Self.AttendanceID" />
+          <EntitySet Name="GradesID" EntityType="Self.GradesID" />
+          <EntitySet Name="GroupID" EntityType="Self.GroupID" />
+          <EntitySet Name="SalaryID" EntityType="Self.SalaryID" />
+          <EntitySet Name="ScheduleID" EntityType="Self.ScheduleID" />
+          <EntitySet Name="StudentID" EntityType="Self.StudentID" />
+          <EntitySet Name="SubjectID" EntityType="Self.SubjectID" />
+          <EntitySet Name="TeacherID" EntityType="Self.TeacherID" />
+          <EntitySet Name="User" EntityType="Self.User" />
+          <EntitySet Name="Document" EntityType="ElectronicMagazineModel.Document" />
+        </EntityContainer>
+        <EntityType Name="Document">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="LinkDocument" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Data" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище ElectronicMagazineModelContainer" CdmEntityContainer="ElectronicMagazineEntities">
+          <EntitySetMapping Name="AttendanceID">
+            <EntityTypeMapping TypeName="ElectronicMagazineModel.AttendanceID">
+              <MappingFragment StoreEntitySet="AttendanceID">
+                <ScalarProperty Name="IDAttendance" ColumnName="IDAttendance" />
+                <ScalarProperty Name="IDStudent" ColumnName="IDStudent" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GradesID">
+            <EntityTypeMapping TypeName="ElectronicMagazineModel.GradesID">
+              <MappingFragment StoreEntitySet="GradesID">
+                <ScalarProperty Name="IDGrades" ColumnName="IDGrades" />
+                <ScalarProperty Name="Grades" ColumnName="Grades" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="GroupID">
+            <EntityTypeMapping TypeName="ElectronicMagazineModel.GroupID">
+              <MappingFragment StoreEntitySet="GroupID">
+                <ScalarProperty Name="IDGroup" ColumnName="IDGroup" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="IDTeacher" ColumnName="IDTeacher" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SalaryID">
+            <EntityTypeMapping TypeName="ElectronicMagazineModel.SalaryID">
+              <MappingFragment StoreEntitySet="SalaryID">
+                <ScalarProperty Name="IDSalary" ColumnName="IDSalary" />
+                <ScalarProperty Name="Salary" ColumnName="Salary" />
+                <ScalarProperty Name="IDTeacher" ColumnName="IDTeacher" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ScheduleID">
+            <EntityTypeMapping TypeName="ElectronicMagazineModel.ScheduleID">
+              <MappingFragment StoreEntitySet="ScheduleID">
+                <ScalarProperty Name="IDSchedule" ColumnName="IDSchedule" />
+                <ScalarProperty Name="Monday" ColumnName="Monday" />
+                <ScalarProperty Name="Tuesday" ColumnName="Tuesday" />
+                <ScalarProperty Name="Wednesday" ColumnName="Wednesday" />
+                <ScalarProperty Name="Thursday" ColumnName="Thursday" />
+                <ScalarProperty Name="Friday" ColumnName="Friday" />
+                <ScalarProperty Name="Saturday" ColumnName="Saturday" />
+                <ScalarProperty Name="Sanday" ColumnName="Sanday" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="StudentID">
+            <EntityTypeMapping TypeName="ElectronicMagazineModel.StudentID">
+              <MappingFragment StoreEntitySet="StudentID">
+                <ScalarProperty Name="IDUser" ColumnName="IDUser" />
+                <ScalarProperty Name="FIO" ColumnName="FIO" />
+                <ScalarProperty Name="IDGroup" ColumnName="IDGroup" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="IDAttendance" ColumnName="IDAttendance" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SubjectID">
+            <EntityTypeMapping TypeName="ElectronicMagazineModel.SubjectID">
+              <MappingFragment StoreEntitySet="SubjectID">
+                <ScalarProperty Name="IDSubjects" ColumnName="IDSubjects" />
+                <ScalarProperty Name="Subject" ColumnName="Subject" />
+                <ScalarProperty Name="Teacher" ColumnName="Teacher" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TeacherID">
+            <EntityTypeMapping TypeName="ElectronicMagazineModel.TeacherID">
+              <MappingFragment StoreEntitySet="TeacherID">
+                <ScalarProperty Name="IDTeacher" ColumnName="IDTeacher" />
+                <ScalarProperty Name="FIO" ColumnName="FIO" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="IDGroup" ColumnName="IDGroup" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User">
+            <EntityTypeMapping TypeName="ElectronicMagazineModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="Login" ColumnName="Login" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Role" ColumnName="Role" />
+                <ScalarProperty Name="IDFIO" ColumnName="IDFIO" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Document">
+            <EntityTypeMapping TypeName="ElectronicMagazineModel.Document">
+              <MappingFragment StoreEntitySet="Document">
+                <ScalarProperty Name="Data" ColumnName="Data" />
+                <ScalarProperty Name="LinkDocument" ColumnName="LinkDocument" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

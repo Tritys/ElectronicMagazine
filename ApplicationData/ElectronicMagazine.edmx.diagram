@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="121b90ce5e86408695dd84edb2542e95" Name="Diagram1">
+        <EntityTypeShape EntityType="ElectronicMagazineModel.AttendanceID" Width="1.5" PointX="0.5" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="ElectronicMagazineModel.GradesID" Width="1.5" PointX="2.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ElectronicMagazineModel.GroupID" Width="1.5" PointX="12.5" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ElectronicMagazineModel.SalaryID" Width="1.5" PointX="1.75" PointY="6.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="ElectronicMagazineModel.ScheduleID" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ElectronicMagazineModel.StudentID" Width="1.5" PointX="3.875" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ElectronicMagazineModel.SubjectID" Width="1.5" PointX="9.375" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ElectronicMagazineModel.TeacherID" Width="1.5" PointX="9.625" PointY="6.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="ElectronicMagazineModel.User" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ElectronicMagazineModel.Document" Width="1.5" PointX="4.375" PointY="7.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
